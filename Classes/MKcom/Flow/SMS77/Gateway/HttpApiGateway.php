@@ -6,7 +6,6 @@ namespace MKcom\Flow\SMS77\Gateway;
  */
 
 use TYPO3\Flow\Annotations as Flow;
-use TYPO3\Flow\Object\ObjectManagerInterface;
 
 /**
  * Class HttpApiGateway
@@ -19,11 +18,6 @@ class HttpApiGateway extends \MKcom\SMS77\Gateway\HttpApiGateway
 {
 
     /**
-     * @var ObjectManagerInterface
-     */
-    protected $objectManager;
-
-    /**
      * @Flow\InjectConfiguration("settings")
      * @var array
      */
@@ -34,16 +28,6 @@ class HttpApiGateway extends \MKcom\SMS77\Gateway\HttpApiGateway
      * @var RequestEngineInterface
      */
     protected $requestEngine;
-
-    /**
-     * HttpApiGateway constructor.
-     *
-     * @param ObjectManagerInterface $objectManager
-     */
-    public function __construct(ObjectManagerInterface $objectManager)
-    {
-        $this->objectManager = $objectManager;
-    }
 
     /**
      * @return void
