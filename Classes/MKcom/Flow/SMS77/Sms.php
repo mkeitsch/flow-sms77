@@ -5,6 +5,8 @@ namespace MKcom\Flow\SMS77;
  * This file is part of the MKcom.Flow.SMS77 package.
  */
 
+use TYPO3\Flow\Annotations as Flow;
+
 /**
  * Class Sms
  *
