@@ -1,0 +1,4 @@
+MKcom:
+  Flow:
+    SMS77:
+      requestEngine: 'MKcom\Flow\SMS77\Gateway\RequestEngine\FlowRequestEngine'

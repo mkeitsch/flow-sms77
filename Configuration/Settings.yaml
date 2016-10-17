@@ -1,21 +1,24 @@
 MKcom:
-  SMS77:
-    settings:
+  Flow:
+    SMS77:
+      requestEngine: 'MKcom\Flow\SMS77\Gateway\RequestEngine\LoggingEngine'
+      settings:
 
-#      smsDeliveryUrl:              'https://gateway.sms77.de/'
-#      creditStatusUrl:             'https://gateway.sms77.de/balance.php'
-#      messageStatusUrl:            'https://gateway.sms77.de/status.php'
+#        # Default Settings:
+#        smsDeliveryUrl:              'https://gateway.sms77.de/'
+#        creditStatusUrl:             'https://gateway.sms77.de/balance.php'
+#        messageStatusUrl:            'https://gateway.sms77.de/status.php'
 #
-#      username:                    ''           # Your username
-#      password:                    ''           # Your API key (recommend to use API key instead of password)
+#        username:                    ''           # Your username
+#        password:                    ''           # Your API key (recommend to use API key instead of password)
 #
-#      returnMessageId:             true         # Returns the message ID of the sent SMS
-#      resendLock:                  true         # 90 seconds lock of resending the same SMS
-#      detailedOutput:              true         # Prints additional information of the sent SMS
+#        returnMessageId:             true         # Returns the message ID of the sent SMS
+#        resendLock:                  true         # 90 seconds lock of resending the same SMS
+#        detailedOutput:              true         # Prints additional information of the sent SMS
 #
-#      defaultSender:               ''           # Send only from this number
-#      defaultSmsType:              'basicplus'  # Send only this type of SMS
-#      defaultUnicodeTextEncoding:  false        # Send always with Unicode
-#      defaultUtf8TextEncoding:     false        # Send always as UTF8 / Disable auto detection
-#      defaultFlashSmsDelivery:     false        # Sends SMS as FlashSMS by default
-#      defaultDummySmsDelivery:     false        # Dont send SMS, for development usage
+#        defaultSender:               ''           # Send only from this number
+#        defaultSmsType:              'basicplus'  # Send only this type of SMS
+#        defaultUnicodeTextEncoding:  false        # Send always with Unicode
+#        defaultUtf8TextEncoding:     false        # Send always as UTF8 / Disable auto detection
+#        defaultFlashSmsDelivery:     false        # Sends SMS as FlashSMS by default
+#        defaultDummySmsDelivery:     false        # Dont send SMS, for development usage

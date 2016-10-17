@@ -47,7 +47,7 @@ class LoggingEngine implements RequestEngineInterface
     public function get($url, $getParameters)
     {
         $this->systemLogger->log(
-            sprintf('Send dummy GET request to "%s"', $url . http_build_query($getParameters)),
+            sprintf('Send dummy GET request to "%s"', $url . '?' . http_build_query($getParameters)),
             LOG_DEBUG
         );
 
@@ -62,7 +62,7 @@ class LoggingEngine implements RequestEngineInterface
     public function post($url, $postParameters)
     {
         $this->systemLogger->log(
-            sprintf('Send dummy POST request to "%s" with the following POST parameters', $url, http_build_query($postParameters)),
+            sprintf('Send dummy POST request to "%s" with the following POST parameters', $url . '?' . http_build_query($postParameters)),
             LOG_DEBUG
         );
 

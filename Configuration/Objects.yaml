@@ -1,8 +1,3 @@
-MKcom\Flow\SMS77\Gateway\HttpApiGateway:
-  properties:
-    requestEngine:
-      object: 'MKcom\Flow\SMS77\Gateway\RequestEngine\FlowRequestEngine'
-
 MKcom\Flow\SMS77\Gateway\RequestEngine\FlowRequestEngine:
   properties:
     flowRequestEngine:

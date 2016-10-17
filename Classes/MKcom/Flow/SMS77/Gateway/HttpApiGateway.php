@@ -30,7 +30,12 @@ class HttpApiGateway extends \MKcom\SMS77\Gateway\HttpApiGateway
     protected $configuration;
 
     /**
-     * @Flow\Inject
+     * @Flow\InjectConfiguration("requestEngine")
+     * @var string
+     */
+    protected $configuredRequestEngineClass;
+
+    /**
      * @var RequestEngineInterface
      */
     protected $requestEngine;
@@ -50,6 +55,8 @@ class HttpApiGateway extends \MKcom\SMS77\Gateway\HttpApiGateway
      */
     public function initializeObject()
     {
+        $this->requestEngine = $this->objectManager->get($this->configuredRequestEngineClass);
+
         $this->configuration = array_merge(self::DEFAULT_CONFIGURATION, $this->configuration);
 
         foreach ($this->configuration as $key => $value) {
