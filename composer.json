@@ -3,8 +3,8 @@
     "description": "A Flow package for easy use of MKcom.SMS77",
     "type": "neos-package",
     "require": {
-        "typo3/flow": "*",
-        "mkcom/sms77": "*"
+        "typo3/flow": "^3.3",
+        "mkcom/sms77": "^0.1"
     },
     "autoload": {
         "psr-0": {
