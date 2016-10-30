@@ -4,14 +4,8 @@
     "type": "neos-package",
     "require": {
         "typo3/flow": "^3.3",
-        "mkcom/sms77": "^0.1"
+        "mkcom/sms77": "^0.1-dev"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@bitbucket.org:mkeitsch/mkcom.sms77.git"
-        }
-    ],
     "autoload": {
         "psr-0": {
             "MKcom\\Flow\\SMS77\\": "Classes"
