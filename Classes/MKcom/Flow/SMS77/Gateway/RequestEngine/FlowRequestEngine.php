@@ -2,7 +2,7 @@
 namespace MKcom\Flow\SMS77\Gateway\RequestEngine;
 
 /*
- * This file is part of the MKcom.SMS77 package.
+ * This file is part of the MKcom.Flow.SMS77 package.
  */
 
 use TYPO3\Flow\Annotations as Flow;
@@ -44,11 +44,11 @@ class FlowRequestEngine implements RequestEngineInterface
     }
 
     /**
-     * @param $url
-     * @param $getParameters
+     * @param string $url
+     * @param array $getParameters
      * @return mixed
      */
-    public function get($url, $getParameters)
+    public function get($url, array $getParameters)
     {
         $uri = $this->objectManager->get(Uri::class, $url);
         $uri->setQuery(http_build_query($getParameters));
@@ -62,11 +62,11 @@ class FlowRequestEngine implements RequestEngineInterface
     }
 
     /**
-     * @param $url
-     * @param $postParameters
+     * @param string $url
+     * @param array $postParameters
      * @return mixed
      */
-    public function post($url, $postParameters)
+    public function post($url, array $postParameters)
     {
         $uri = $this->objectManager->get(Uri::class, $url);
 

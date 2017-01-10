@@ -2,7 +2,7 @@
 namespace MKcom\Flow\SMS77\Gateway\RequestEngine;
 
 /*
- * This file is part of the MKcom.SMS77 package.
+ * This file is part of the MKcom.Flow.SMS77 package.
  */
 
 use TYPO3\Flow\Annotations as Flow;
@@ -40,11 +40,11 @@ class LoggingEngine implements RequestEngineInterface
     }
 
     /**
-     * @param $url
-     * @param $getParameters
+     * @param string $url
+     * @param array $getParameters
      * @return string
      */
-    public function get($url, $getParameters)
+    public function get($url, array $getParameters)
     {
         $this->systemLogger->log(
             sprintf('Send dummy GET request to "%s"', $url . '?' . http_build_query($getParameters)),
@@ -55,11 +55,11 @@ class LoggingEngine implements RequestEngineInterface
     }
 
     /**
-     * @param $url
-     * @param $postParameters
+     * @param string $url
+     * @param array $postParameters
      * @return string
      */
-    public function post($url, $postParameters)
+    public function post($url, array $postParameters)
     {
         $this->systemLogger->log(
             sprintf('Send dummy POST request to "%s" with the following POST parameters', $url . '?' . http_build_query($postParameters)),
