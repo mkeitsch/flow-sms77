@@ -7,8 +7,8 @@
         "mkcom/sms77": "^1.1"
     },
     "autoload": {
-        "psr-0": {
-            "MKcom\\Flow\\SMS77\\": "Classes"
+        "psr-4": {
+            "MKcom\\Flow\\SMS77\\": "Classes/"
         }
     },
     "extra": {
